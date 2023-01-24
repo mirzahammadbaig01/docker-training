@@ -4,7 +4,7 @@ const app = express();
 const MongoClient = require("mongodb").MongoClient;
 
 app.get("/", async (req, res) => {
-  const db = new MongoClient("mongodb://admin:admin@0.0.0.0:27018");
+  const db = new MongoClient("mongodb://admin:admin@localhost:27018");
   if (await db.connect()) {
     console.log("connected");
   }
